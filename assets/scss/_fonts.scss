@@ -1,0 +1,32 @@
+// AGBookPro
+@font-face {
+  font-family: 'AGBookPro';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/AGBookPro/AGBookProReg.ttf') format('ttf'), url('../fonts/AGBookPro/AGBookProReg.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/AGBookPro/AGBookProReg.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* AGBookPro-Bold */
+@font-face {
+  font-family: 'AGBookPro';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('../fonts/AGBookPro/AGBookProBol.ttf') format('ttf'), url('../fonts/AGBookPro/AGBookProBol.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/AGBookPro/AGBookProBol.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* GoshaSans-Regular */
+@font-face {
+  font-family: 'GoshaSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/GoshaSans/GoshaSans-Regular.ttf') format('ttf'), url('../fonts/GoshaSans/GoshaSans-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/GoshaSans/GoshaSans-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* GoshaSans-Bold */
+@font-face {
+  font-family: 'GoshaSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('../fonts/GoshaSans/GoshaSans-Bold.ttf') format('ttf'), url('../fonts/GoshaSans/GoshaSans-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/GoshaSans/GoshaSans-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

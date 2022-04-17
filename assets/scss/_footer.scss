@@ -1,0 +1,124 @@
+.footer {
+    padding: 50px 0px 30px 0px;
+    &-body {
+        margin-bottom: 40px;
+    }
+
+    &-item__title {
+        font-family: "AGBookPro";
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: calc-rem(14);
+        line-height: calc-lh(14, 18);
+        margin-bottom: 20px;
+    }
+    &-item__menu-list {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            color: $gray;
+            font-size: calc-rem(14);
+            line-height: calc-lh(14, 18);
+            transition: all 0.3s ease;
+            &:hover {
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    &-social__list {
+        display: flex;
+        align-items: center;
+    }
+    &-social__item {
+        margin-right: 6px;
+        border-radius: 50%;
+        display: block;
+        overflow: hidden;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-social__link {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        display: block;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            svg {
+                transition: all 0.3s ease;
+            }
+        }
+        svg {
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s ease;
+            fill: $gray;
+        }
+    }
+
+    &-copy {
+        text-align: center;
+        font-size: calc-rem(12);
+        line-height: calc-lh(12, 16);
+    }
+}
+
+@media (max-width: 990px) {
+    .footer {
+        &-item {
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 990px) {
+    .footer {
+        &-item {
+            width: 100%;
+            margin-bottom: 0px;
+            position: relative;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 4px;
+                top: 18px;
+                width: 8px;
+                height: 8px;
+                transform: rotate(-45deg);
+                border-bottom: 2px solid $gray;
+                border-left: 2px solid $gray;
+                transition: all 0.3s ease;
+            }
+            &.active {
+                &::after {
+                    transform: rotate(-225deg);
+                }
+            } 
+        }
+        &-item__title {
+            margin-bottom: 0;
+        }
+        &-item__menu-list {
+            display: none;
+            padding: 8px 0;
+        }
+    }
+    .footer-contacts{
+        border-bottom: none;
+        &::after{
+            display: none;
+        }
+    }
+}

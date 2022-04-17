@@ -1,0 +1,33 @@
+// Transition
+$transition_normal: all 0.3s ease-in-out;
+$transition_long: all 0.8s ease-in-out;
+
+//Fonts
+$base-font: 'AGBookPro', sans-serif;
+$second-font: 'GoshaSans';
+
+//=================== fonts
+
+
+//===================  colors
+$main-color: #09bcbf;
+$yellow: #EBFF00;
+$violet: #D27CE0;
+$black: #000000;
+$white: #ffffff;
+$gray: #333333;
+
+$rem: 16;
+@function calc-rem($px) {
+	
+	$result: $px / $rem;
+	
+	@return $result + rem;
+}
+
+@function calc-lh($fs, $lh) {
+	
+	$result: $lh / $fs;
+	
+	@return $result;
+}

@@ -1,0 +1,226 @@
+.header {
+  background-color: $white;
+  &-logo {
+    display: flex;
+    align-items: center;
+    &_mob {
+      display: none;
+    }
+  }
+  &-body {
+    padding: 30px 0;
+    align-items: center;
+    display: flex;
+  }
+  &-menu {
+    display: flex;
+    li {
+      margin-right: 20px;
+      margin-left: 20px;
+      a {
+        position: relative;
+        padding: 8px 0;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          display: inline-block;
+          width: 0;
+          height: 2px;
+          transition: 0.3s ease-in-out;
+          background-color: $black;
+        }
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .with-ul,
+    .menu-item-has-children {
+      position: relative;
+      &:hover {
+        &:after {
+          border-right: 1px solid $black;
+          border-bottom: 1px solid $black;
+        }
+
+        & > .sub-menu {
+          display: block;
+        }
+      }
+      .sub-menu {
+        position: absolute;
+        white-space: nowrap;
+        display: none;
+        list-style: none;
+        max-width: 400px;
+        min-width: 150px;
+        top: 100%;
+        z-index: 99;
+        margin: 0;
+        background: #fff;
+        box-shadow: 0 1px 8.82px 0.18px hsla(217, 9%, 51%, 0.65);
+        li {
+          margin: 0;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          font-size: 14px;
+          padding: 15px;
+          text-transform: none;
+          display: block;
+          width: 100%;
+          white-space: normal;
+          line-height: 1.4;
+          white-space: nowrap;
+          &:hover {
+            &:after {
+              color: $black;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &__wrapp {
+      margin-left: auto;
+      display: flex;
+    }
+  }
+  .sign-up {
+    margin-left: 80px;
+  }
+  .cart {
+    margin-left: 90px;
+  }
+}
+
+//Burger
+.header-burger {
+  width: 30px;
+  height: 23px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $gray;
+    opacity: 1;
+    left: 0;
+    transition: 0.25s ease-in-out;
+    border-radius: 3px;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 10px;
+      left: 0;
+      max-width: 100%;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+      max-width: 100%;
+    }
+  }
+  &.active {
+    span:nth-child(1) {
+      top: 9px;
+      transform: rotate(135deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+      right: -60px;
+    }
+    span:nth-child(3) {
+      top: 9px;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .header {
+    &-burger__wrapper {
+      display: block;
+      margin-left: auto;
+      z-index: 1002;
+    }
+
+    &-logo {
+      display: none;
+      &_mob {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &-body {
+      padding: 20px 0;
+      justify-content: space-between;
+    }
+    &-menu__wrapp {
+      position: absolute;
+      background: $white;
+      left: -1000px;
+      right: 0;
+      top: 83px;
+      padding: 60px 20px;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 900;
+      overflow: auto;
+      &.active {
+        transition: all 0.4s ease;
+        opacity: 1;
+        left: 0;
+        visibility: visible;
+      }
+    }
+    &-menu {
+      flex-direction: column;
+      margin: auto;
+      li {
+        margin: 0;
+        width: 100%;
+      }
+      li a {
+        display: block;
+        text-align: center;
+        padding: 10px 0px;
+        font-size: 26px;
+        line-height: 140%;
+      }
+    }
+
+    .sign-up {
+      margin: auto;
+      margin-top: 40px;
+    }
+    .cart {
+      margin-left: 0;
+    }
+  }
+  .header-burger {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+  }
+}
